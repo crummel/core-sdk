@@ -76,6 +76,11 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="SourceBuiltPackageVersions.props" Condition="Exists('SourceBuiltPackageVersions.props')" />
   <Import Project="GennedPackageVersions.props" Condition="Exists('GennedPackageVersions.props')" />
+
+  <!-- Temporary versions needed for bootstrapping.  Remove once we have a complete tarball. -->
+  <PropertyGroup>
+    <MicrosoftCodeAnalysisCSharpVersion>3.8.0</MicrosoftCodeAnalysisCSharpVersion>
+  </PropertyGroup>
 </Project>
 ]]>
       </PackageVersionsPropsContents>
