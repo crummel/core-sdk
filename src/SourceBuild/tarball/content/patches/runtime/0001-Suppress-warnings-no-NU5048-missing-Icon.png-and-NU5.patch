@@ -1,0 +1,26 @@
+From ce5d54eae08534122aea75d1989eea60fd104e80 Mon Sep 17 00:00:00 2001
+From: Chris Rummel <crummel@microsoft.com>
+Date: Thu, 22 Jul 2021 16:16:09 -0500
+Subject: [PATCH] Suppress warnings no NU5048 - missing Icon.png and NU5124 -
+ bad license.
+
+---
+ Directory.Build.props | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Directory.Build.props b/Directory.Build.props
+index 1c94c543fe7..cca01747bbf 100644
+--- a/Directory.Build.props
++++ b/Directory.Build.props
+@@ -7,7 +7,7 @@
+          For offline builds we still set OfficialBuildId but we need to build all the packages for a single
+          leg only, so we also take DotNetBuildFromSource  into account. -->
+     <BuildingAnOfficialBuildLeg Condition="'$(BuildingAnOfficialBuildLeg)' == '' and '$(OfficialBuildId)' != '' and '$(DotNetBuildFromSource)' != 'true'">true</BuildingAnOfficialBuildLeg>
+-    <NoWarn>IL2008;IL2009;IL2012;IL2025;IL2026;IL2035;IL2050</NoWarn>
++    <NoWarn>IL2008;IL2009;IL2012;IL2025;IL2026;IL2035;IL2050;NU5048;NU5124</NoWarn>
+   </PropertyGroup>
+ 
+   <PropertyGroup Label="CalculateTargetOS">
+-- 
+2.18.0
+
